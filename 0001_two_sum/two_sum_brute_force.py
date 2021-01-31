@@ -7,4 +7,5 @@ def two_sum(arr, target):
 
 a = [1,2,3,4]
 
+print(two_sum(a,7))
 print(two_sum(a,8))
