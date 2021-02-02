@@ -23,8 +23,20 @@ def two_sum_brute_force(arr, target):
     return 'No match'
 
 
+def two_sum_hash(arr, target):
+    dictionary = {}
+    for index, value in enumerate(arr):
+        if (target-value) in dictionary:
+            return [dictionary[target-value], index]
+        else:
+            dictionary[value] = index
+
+
 if __name__ == '__main__':
 
     a = [1,2,3,4]
     print(two_sum_brute_force(a,7))
     print(two_sum_brute_force(a,8))
+    print(two_sum_hash(a,3))
+    print(two_sum_hash(a,7))
+    print(two_sum_hash(a,8))
