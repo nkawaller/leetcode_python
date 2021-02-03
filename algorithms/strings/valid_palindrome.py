@@ -14,4 +14,16 @@ Output: false
 """
 
 def isPalindrome(s: str) -> bool:
-    pass
+    result = ''
+    s = s.lower()
+    for i in s:
+        if i.isalnum():
+            result += i
+    return result == result[::-1]
+
+if __name__ == '__main__':
+
+    a = "A man, a plan, a canal: Panama"
+    b = "race a car"
+    print(isPalindrome(a))
+    print(isPalindrome(b))
