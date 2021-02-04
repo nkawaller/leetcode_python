@@ -39,3 +39,11 @@ class Solution:
             root.left = right
             root.right = left
         return root
+
+    # Hipper way to assign the swap
+    def invertTreeHip(self, root):
+        if root is None:
+            return None
+        root.left, root.right = \
+            self.invertTree(root.right), self.invertTree(root.left)
+        return root
