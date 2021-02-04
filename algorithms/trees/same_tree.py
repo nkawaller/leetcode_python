@@ -20,4 +20,14 @@ class TreeNode:
 
 class Solution:
     def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
-        pass
+        if p is None and q is None:
+            return True
+        if p is None:
+            return False
+        if q is None:
+            return False
+        if p.val != q.val:
+            return False
+        leftIsSame = self.isSameTree(p.left, q.left)
+        rightIsSame = self.isSameTree(p.right, q.right)
+        return leftIsSame and rightIsSame
