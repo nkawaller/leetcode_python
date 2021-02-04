@@ -39,3 +39,14 @@ def missing_number_hash(nums):
     for number in range(n):
         if number not in num_set:
             return number
+
+
+# Bit Manipulation
+# Time = 0(n)
+# Space = O(1)
+
+def missing_number_bit(nums):
+    missing = len(nums)
+    for i, num in enumerate(nums):
+        missing ^= i ^ num
+    return missing
