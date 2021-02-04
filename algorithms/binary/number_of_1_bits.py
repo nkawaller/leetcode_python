@@ -20,10 +20,9 @@ def hammingWeightCounter(n: int) -> int:
 
 
 # Removing the right-most '1'
-def hammingWeightPop(n: int) -> int:
+def hammingWeightAnd(n: int) -> int:
     result = 0
     while n:
         n = n&(n-1)
         result += 1
     return result
-
