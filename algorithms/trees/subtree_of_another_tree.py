@@ -24,7 +24,24 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
-        
+
+
 class Solution:
     def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
-        pass
+        if t is None:
+            return True
+        if s is None:
+            return False
+        if self.areIdentical(s,t):
+            return True
+        return self.isSubtree(s.left, t) or self.isSubtree(s.right, t)
+    
+    def areIdentical(self, r1, r2):
+        if r1 is None and r2 is None:
+            return True
+        if r1 is None or r2 is None:
+            return False
+        return (r1.val == r2.val and
+               self.areIdentical(r1.left, r2.left) and
+                self.areIdentical(r1.right, r2.right)
+               )
