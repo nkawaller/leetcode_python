@@ -18,3 +18,13 @@ Given tree t:
 
 Return true, because t has the same structure and node values with a subtree of s. 
 """
+# Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+        
+class Solution:
+    def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
+        pass
