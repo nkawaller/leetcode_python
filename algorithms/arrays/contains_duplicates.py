@@ -18,3 +18,11 @@ def containsDuplicate(nums):
     num_set = set(nums)
     if len(num_set) != len(nums):
         return True
+    return False
+
+if __name__ == "__main__":
+
+    a = [1,2,3,4,1]
+    b = [1,2,3,4,5]
+    print(containsDuplicate(a))
+    print(containsDuplicate(b))
