@@ -20,9 +20,14 @@ def containsDuplicate(nums):
         return True
     return False
 
+def containsDuplicateOneLiner(nums):
+    return True if len(set(nums)) < len(nums) else False
+
 if __name__ == "__main__":
 
     a = [1,2,3,4,1]
     b = [1,2,3,4,5]
     print(containsDuplicate(a))
     print(containsDuplicate(b))
+    print(containsDuplicateOneLiner(a))
+    print(containsDuplicateOneLiner(b))
