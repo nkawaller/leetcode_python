@@ -14,14 +14,19 @@ Input: [1,2,3,4]
 Output: false
 """
 
+
 def containsDuplicate(nums):
     num_set = set(nums)
     if len(num_set) != len(nums):
         return True
     return False
 
+
+
 def containsDuplicateOneLiner(nums):
     return True if len(set(nums)) < len(nums) else False
+
+
 
 def containsDuplicateHash(nums):
     lib = {}
@@ -29,8 +34,10 @@ def containsDuplicateHash(nums):
         if n in lib:
             return True
         else:
-            lib[n] = 1
+            lib[n] = 1 
     return False
+
+
 
 if __name__ == "__main__":
 
