@@ -24,3 +24,11 @@ def maxSubArray(nums):
         total_sum = max(i, total_sum + i)
         max_sum = max(total_sum, max_sum)
     return max_sum
+
+
+if __name__ == '__main__':
+
+    a = [-2,1,-3,4,-1,2,1,-5,4]
+    b = [1]
+    print(maxSubArray(a))
+    print(maxSubArray(b))
