@@ -31,6 +31,17 @@ def maxProfit(prices):
 
     return max_profit
 
+
+def maxProfit2(prices):
+    n = len(prices)
+    if n < 2:
+        return 0
+    max_profit, min_stock = float('-inf'), prices[0]
+    for p in prices:
+        max_profit = max(max_profit, p - min_stock)
+        min_stock = min(min_stock, p)
+    return max_profit
+
 a = [7,1,5,3,6,4]
 b = [7,6,4,3,1]
 
