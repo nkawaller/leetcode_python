@@ -42,8 +42,26 @@ def maxProfit2(prices):
         min_stock = min(min_stock, p)
     return max_profit
 
+def maxProfitTwoPointers(prices):
+    l, r = 0, 1
+    max_profit = 0
+    while r < len(prices):
+        if prices[l] < prices[r]:
+            profit = prices[r] - prices[l]
+            max_profit = max(max_profit, profit)
+        else:
+            l = r
+        r += 1
+    return max_profit
+
+
+
 a = [7,1,5,3,6,4]
 b = [7,6,4,3,1]
 
 print(maxProfit(a))
 print(maxProfit(b))
+print(maxProfit2(a))
+print(maxProfit2(b))
+print(maxProfitTwoPointers(a))
+print(maxProfitTwoPointers(b))
