@@ -54,14 +54,14 @@ def maxProfitTwoPointers(prices):
         r += 1
     return max_profit
 
+if __name__ == '__main__':
 
+    a = [7,1,5,3,6,4]
+    b = [7,6,4,3,1]
 
-a = [7,1,5,3,6,4]
-b = [7,6,4,3,1]
-
-print(maxProfit(a))
-print(maxProfit(b))
-print(maxProfit2(a))
-print(maxProfit2(b))
-print(maxProfitTwoPointers(a))
-print(maxProfitTwoPointers(b))
+    print(maxProfit(a))
+    print(maxProfit(b))
+    print(maxProfit2(a))
+    print(maxProfit2(b))
+    print(maxProfitTwoPointers(a))
+    print(maxProfitTwoPointers(b))
