@@ -17,7 +17,7 @@ Output: 1
 """
 
 class Solution:
-    def numIslands(self, grid: List[List[str]]) -> int:
+    def numIslands(self, grid):
         if not grid:
             return 0
         
@@ -37,3 +37,26 @@ class Solution:
         self.dfs(grid, i-1, j)
         self.dfs(grid, i, j+1)
         self.dfs(grid, i, j-1)
+
+
+
+if __name__ == '__main__':
+
+    grid = [
+    ["1","1","1","1","0"],
+    ["1","1","0","1","0"],
+    ["1","1","0","0","0"],
+    ["0","0","0","0","0"]
+    ]
+
+    grid2 = [
+    ["1","1","0","1","0"],
+    ["1","1","0","1","0"],
+    ["1","1","0","0","0"],
+    ["0","0","0","0","1"]
+    ]
+
+    a = Solution()
+
+    print(a.numIslands(grid))
+    print(a.numIslands(grid2))
