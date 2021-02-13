@@ -13,17 +13,10 @@ Input: "race a car"
 Output: false
 """
 
-def isPalindrome(s: str) -> bool:
+def is_palindrome(s: str) -> bool:
     result = ''
     s = s.lower()
     for i in s:
         if i.isalnum():
             result += i
     return result == result[::-1]
-
-if __name__ == '__main__':
-
-    a = "A man, a plan, a canal: Panama"
-    b = "race a car"
-    print(isPalindrome(a))
-    print(isPalindrome(b))
