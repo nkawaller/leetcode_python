@@ -1,18 +1,17 @@
-# import unittest
+from algorithms.strings import is_palindrome
 
-# from valid_palindrome import isPalindrome
+import unittest
+
+class TestIsPalindrome(unittest.TestCase):
+    """
+    Test for the file valid_palindrome.py
+    """
+
+    def test_is_palindrome(self):
+        self.assertTrue(is_palindrome('racecar'))
+        self.assertTrue(is_palindrome('A man a plan a canal: Panama'))
+        self.assertFalse(is_palindrome('Race a car'))
 
 
-# class TestIsPalindrome(unittest.TestCase):
-#     """
-#     Test for the file valid_palindrome.py
-#     """
-
-#     def test_isPalindrome(self):
-#         self.assertTrue(isPalindrome('racecar'))
-#         self.assertTrue(isPalindrome('A man a plan a canal: Panama'))
-#         self.assertFalse(isPalindrome('Race a car'))
-
-
-# if __name__ == '__main__':
-#     unittest.main()
+if __name__ == '__main__':
+    unittest.main()
