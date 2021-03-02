@@ -19,6 +19,9 @@ Given tree t:
 Return true, because t has the same structure and node values with a subtree of s. 
 """
 # Definition for a binary tree node.
+import collections
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -32,24 +35,25 @@ class Solution:
             return True
         if s is None:
             return False
-        if self.areIdentical(s,t):
+        if self.areIdentical(s, t):
             return True
         return self.isSubtree(s.left, t) or self.isSubtree(s.right, t)
-    
+
     def areIdentical(self, r1, r2):
         if r1 is None and r2 is None:
             return True
         if r1 is None or r2 is None:
             return False
         return (r1.val == r2.val and
-               self.areIdentical(r1.left, r2.left) and
+                self.areIdentical(r1.left, r2.left) and
                 self.areIdentical(r1.right, r2.right)
-               )
+                )
+
+
 """
 Alternate solution
 """
 
-import collections
 
 def is_subtree(big, small):
     flag = False
@@ -65,9 +69,10 @@ def is_subtree(big, small):
             queue.append(node.right)
     return flag
 
+
 def comp(p, q):
     if p is None and q is None:
         return True
     if p is not None and q is not None:
-        return p.val == q.val and comp(p.left,q.left) and comp(p.right,q.right)
+        return p.val == q.val and comp(p.left, q.left) and comp(p.right, q.right)
     return False
