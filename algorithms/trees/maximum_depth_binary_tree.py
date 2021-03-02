@@ -18,6 +18,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
         if root is None:
@@ -27,4 +28,3 @@ class Solution:
                 self.maxDepth(root.left),
                 self.maxDepth(root.right)
             )
-        
