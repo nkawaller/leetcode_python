@@ -22,7 +22,7 @@ def maxProfit(prices):
     buy = prices[0]
     max_profit = 0
 
-    for i in range(1,len(prices)):
+    for i in range(1, len(prices)):
         profit = prices[i] - buy
         if profit > max_profit:
             max_profit = profit
@@ -42,6 +42,7 @@ def maxProfit2(prices):
         min_stock = min(min_stock, p)
     return max_profit
 
+
 def maxProfitTwoPointers(prices):
     l, r = 0, 1
     max_profit = 0
@@ -54,10 +55,11 @@ def maxProfitTwoPointers(prices):
         r += 1
     return max_profit
 
+
 if __name__ == '__main__':
 
-    a = [7,1,5,3,6,4]
-    b = [7,6,4,3,1]
+    a = [7, 1, 5, 3, 6, 4]
+    b = [7, 6, 4, 3, 1]
 
     print(maxProfit(a))
     print(maxProfit(b))
