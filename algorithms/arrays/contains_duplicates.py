@@ -22,10 +22,8 @@ def containsDuplicate(nums):
     return False
 
 
-
 def containsDuplicateOneLiner(nums):
     return True if len(set(nums)) < len(nums) else False
-
 
 
 def containsDuplicateHash(nums):
@@ -34,15 +32,14 @@ def containsDuplicateHash(nums):
         if n in lib:
             return True
         else:
-            lib[n] = 1 
+            lib[n] = 1
     return False
-
 
 
 if __name__ == "__main__":
 
-    a = [1,2,3,4,1]
-    b = [1,2,3,4,5]
+    a = [1, 2, 3, 4, 1]
+    b = [1, 2, 3, 4, 5]
     print(containsDuplicate(a))
     print(containsDuplicate(b))
     print(containsDuplicateOneLiner(a))
