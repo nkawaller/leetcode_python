@@ -15,11 +15,12 @@ Output: Because nums[0] + nums[1] == 9, we return [0, 1].
 
 """
 
+
 def two_sum_brute_force(arr, target):
-    for i in range(0,len(arr)-1):
-        for j in range(1,len(arr)):
+    for i in range(0, len(arr)-1):
+        for j in range(1, len(arr)):
             if arr[i] + arr[j] == target:
-                return [i,j]
+                return [i, j]
     return 'No match'
 
 
@@ -34,9 +35,9 @@ def two_sum_hash(arr, target):
 
 if __name__ == '__main__':
 
-    a = [1,2,3,4]
-    print(two_sum_brute_force(a,7))
-    print(two_sum_brute_force(a,8))
-    print(two_sum_hash(a,3))
-    print(two_sum_hash(a,7))
-    print(two_sum_hash(a,8))
+    a = [1, 2, 3, 4]
+    print(two_sum_brute_force(a, 7))
+    print(two_sum_brute_force(a, 8))
+    print(two_sum_hash(a, 3))
+    print(two_sum_hash(a, 7))
+    print(two_sum_hash(a, 8))
