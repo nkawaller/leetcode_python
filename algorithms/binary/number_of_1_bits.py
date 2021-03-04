@@ -9,6 +9,8 @@ Explanation: The input binary string 00000000000000000000000000001011 has a tota
 """
 
 # One-liner
+
+
 def hammingWeightSimple(n: int) -> int:
     return bin(n).count('1')
 
@@ -23,6 +25,6 @@ def hammingWeightCounter(n: int) -> int:
 def hammingWeightAnd(n: int) -> int:
     result = 0
     while n:
-        n = n&(n-1)
+        n = n & (n-1)
         result += 1
     return result

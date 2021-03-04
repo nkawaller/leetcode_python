@@ -23,6 +23,7 @@ Explanation: There are three ways to climb to the top.
 3. 2 steps + 1 step
 """
 
+
 def climbStairs(n: int) -> int:
     if n <= 0:
         return 0
@@ -32,11 +33,11 @@ def climbStairs(n: int) -> int:
         return 2
 
     result = [0] * (n+1)
-    result[0:3] = [0,1,2]
+    result[0:3] = [0, 1, 2]
 
     for i in range(3, n+1):
         result[i] = result[i-1] + result[i-2]
-    
+
     return result[n]
 
 

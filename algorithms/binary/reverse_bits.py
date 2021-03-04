@@ -14,13 +14,13 @@ representation is 00111001011110000010100101000000.
 def reverseBits(n: int) -> int:
     rep = list("{:032b}".format(n))
     rep.reverse()
-    return int(''.join(rep),2)
+    return int(''.join(rep), 2)
 
 
 def reverseBitsBitwise(n: int) -> int:
     output, power = 0, 31
     while n:
-        output += (n&1) << power
+        output += (n & 1) << power
         n = n >> 1
         power -= 1
     return output
