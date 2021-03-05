@@ -7,6 +7,7 @@ Output: [1,1,2,3,4,4]
 """
 # Definition for singly-linked list.
 
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -15,7 +16,7 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        
+
         placeholder = ListNode(0)
         tail = placeholder
 
