@@ -24,7 +24,6 @@ class Solution:
         return prev
 
 
-
 # Fully implemented linked list with reverse function
 
 class LinkedList:
@@ -58,7 +57,7 @@ class LinkedList:
 if __name__ == '__main__':
 
     l = LinkedList()
-    for i in range(1,6):
+    for i in range(1, 6):
         l.addNode(i)
     l.printList()
     print('--------------')
