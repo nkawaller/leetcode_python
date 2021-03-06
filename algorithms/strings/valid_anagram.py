@@ -13,6 +13,8 @@ Output: false
 """
 
 # Time = O(n log n)
+
+
 def isAnagram(s: str, t: str) -> bool:
     return sorted(s) == sorted(t)
 
@@ -39,8 +41,6 @@ def isAnagramHash(s: str, t: str) -> bool:
     return True
 
 
-
-
 if __name__ == '__main__':
 
     a = 'anagram'
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     c = 'coffee'
     d = 'efoefc'
 
-    print(isAnagram(a,b))
-    print(isAnagram(c,d))
-    print(isAnagramHash(a,b))
-    print(isAnagramHash(c,d))
+    print(isAnagram(a, b))
+    print(isAnagram(c, d))
+    print(isAnagramHash(a, b))
+    print(isAnagramHash(c, d))
