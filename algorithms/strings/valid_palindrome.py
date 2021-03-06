@@ -13,6 +13,7 @@ Input: "race a car"
 Output: false
 """
 
+
 def is_palindrome(s: str) -> bool:
     result = ''
     s = s.lower()
