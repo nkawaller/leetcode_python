@@ -13,6 +13,7 @@ Time: O(n)
 Space: O(n)
 """
 
+
 def lengthOfLongestSubstring(s: str) -> int:
     result = 0
     char_set = set()
