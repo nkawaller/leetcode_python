@@ -1,3 +1,5 @@
+# pylint: disable=anomalous-backslash-in-string
+
 """
 Invert a binary tree.
 
